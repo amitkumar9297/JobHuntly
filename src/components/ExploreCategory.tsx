@@ -16,7 +16,7 @@ const categories = [
 
 const ExploreCategory: React.FC = () => {
   return (
-    <Box sx={{ padding: 2 }} width="100%" marginX={"auto"}>
+    <Box sx={{ padding: 2 }} width="85%" marginX={"auto"}>
       <Typography variant="h5" fontWeight={700} mb={3}>
         Explore Categories
       </Typography>

@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { ReactComponent as Image1 } from "../../public/images/Picture1.svg";
 import SearchBox from "../components/common/SearchBox";
 import Companies from "../components/Companies";
 import ExploreCategory from "../components/ExploreCategory";
+import PostingPamplete from "../components/PostingPamplete";
+import FeaturedJob from "../components/FeaturedJob";
 
 const textVariants = {
   hidden: { opacity: 0, x: -50 },
@@ -61,14 +63,20 @@ const Home: React.FC = () => {
           <Box width={"60%"} height={"3.5rem"} m={"1rem,0"}>
             <SearchBox />
           </Box>
-          <Typography  fontSize={"1rem"} sx={{ opacity: 0.7, marginTop: '2rem', maxWidth: "32.5rem"}}>
-          Popular : UI Designer, UX Researcher, Android, Admin
+          <Typography fontSize={"1rem"} sx={{ opacity: 0.7, marginTop: '2rem', maxWidth: "32.5rem" }}>
+            Popular : UI Designer, UX Researcher, Android, Admin
           </Typography>
         </motion.div>
-        
+
       </Box>
-      <Companies />
-      <ExploreCategory />
+      <Stack width={"100%"} alignItems={'center'} justifyContent={'center'}>
+        <Companies />
+        <ExploreCategory />
+        <Box width={'85%'}>
+          <PostingPamplete />
+        </Box>
+        <FeaturedJob/>
+      </Stack>
     </Box>
   );
 };
